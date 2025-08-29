@@ -1,7 +1,7 @@
 # A/B Tests Analysis on Advertising Initiative Efforts
 
 ## Table of Contents
-- [Overview](#background-and-overview)
+- [Overview](#overview)
 - [Methodology](#methodology)
 - [Key Dimensions](#key-dimensions)
 - [Data Preprocessing](#data-preprocessing)
