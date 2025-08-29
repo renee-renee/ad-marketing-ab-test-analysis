@@ -9,7 +9,9 @@
 - [Recommendations and Next Steps](#recommendations-and-next-steps)
 
 ## Overview
-This A/B test analysis focuses on the 1st week test run of a 3-week campaign aimed at evaluating the efforts for an advertising initiative. The goal is to understand the effectiveness of Ads versus using only Public Service Announcements (PSAs) and to derive actionable insights that can improve campaign performance in the subsequent weeks.
+This A/B test analysis focuses on the 1st week test run of a 3-week campaign aimed at evaluating the efforts for an advertising initiative displayed on the Voucher Page. The goals are:
+- to understand the effectiveness of Ads versus using only Public Service Announcements (PSAs),
+- to derive actionable insights that can improve campaign performance in the subsequent weeks.
 
 **Data Source:** [Marketing A/B Testing](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing/)
 
@@ -24,7 +26,7 @@ To effectively guide the analysis, several key dimensions are identified to serv
 
 ## Data Preprocessing
 Data was preprossed to ensure accuracy in analysis. This included:
-- **Data Overview:** Initial examination includes checking the first few records, understanding the shape of the dataset, and identifying any missing values.
+- **Data Overview:** Initial examination includes understanding the shape (columns and rows) of the dataset and the type of data each column contains.
 - **Data Cleaning:** Missing values were not found in the dataset.
 - **Outlier Analysis:**
     Outlier detection was conducted using the Interquartile Range (IQR) method, which identifies outliers as values that fall significantly outside the typical range of data. In this analysis, 9% of the dataset was found to be outliers, and they were flagged and excluded during pivot table analysis.
@@ -33,13 +35,16 @@ Data was preprossed to ensure accuracy in analysis. This included:
 
 A more detailed view for the data preprocessing can be found **[here](data_preprocessing.pdf)**.
 
-The formula utilised for the data preprocessing can be found **[here](marketing_AB.xlsx)**.
+The formula utilised for the data preprocessing can be found **[here](https://docs.google.com/spreadsheets/d/10EKa4jigr4YUEAnRDDUbmvarAkz7Dtr-hLGcdjvkYIs/edit?usp=sharing)**.
 
 ## Executive Summary
 - The overall conversion rate for the ad group was 1.34%, while the PSA group achieved a conversion rate of 1.06%.
-- User segmentation based on ad exposure levels indicated that higher ad visibility correlated with increased conversion rates. 
-- The analysis of average ads seen by day showed variations in user engagement throughout the week, with Monday and Tuesday yielding the highest conversion rate.
-- Peak ad exposure by hour revealed that afternoons generally had the highest conversion rates, particularly for the period between 14:00 to 16:59. 
+- User segmentation based on ad exposure levels indicated that higher ad visibility correlated with increased conversion rates.
+- The analysis of average ads seen by day showed variations in user engagement throughout the week, with Monday and Tuesday yielding the highest conversion rates at 1.74% and 1.59% respectively.
+- Peak ad exposure by hour revealed that afternoons generally had the highest conversion rates (1.44%), particularly for the period between 14:00 to 16:59.
+
+Specific settings for the Pivot Tables can be found **[here](https://docs.google.com/spreadsheets/d/10EKa4jigr4YUEAnRDDUbmvarAkz7Dtr-hLGcdjvkYIs/edit?usp=sharing)**.
+
 ![Conversion Rate by Test Group](./tables/Conversion_Rate_by_Test_Group.png)
 ![Total Ads Seen by Conversion Status](./tables/Total_Ads_Seen_by_Conversion_Status.png)
 ![User Segmentation by Ads Exposure](./tables/User_Segmentation_by_Ads_Exposure.png)
@@ -47,7 +52,8 @@ The formula utilised for the data preprocessing can be found **[here](marketing_
 ![Peak Ad Exposure by Time Period and Conversion](./tables/Peak_Ad_Exposure_by_Time_Period_and_Conversion.png)
 ![Peak Ad Exposure by Hour and Conversion](./tables/Peak_Ad_Exposure_by_Hour_and_Conversion.png)
 ## Recommendations and Next Steps
-Based on the findibngs from the test run:
+Based on the findings from the test run:
 - **Optimize Ad Exposure:** Focus on the hours and days that showed higher conversion rates, particularly in the early part of the week and during peak hours.
 - **Iterate on Campaign Messaging:** Test different ad messages to enhance engagement and conversion.
 - **Monitor Performance:** Continuously analyze data from the next 2 weeks to refine strategies and ensure campaign success.
+- **Understand the Extreme Data:** Understand the causes of the outliers data to ensure data quality control in the following analysis, through deep diving into the specific userID and checking with Product / Infrastructure Team to understand the data.
